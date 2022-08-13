@@ -4,6 +4,16 @@
 @endsection
 @section('body')
     {{-- create a list of card views using tailwind --}}
+
+
+    <a href="{{ route('recipes.create') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+        Create Recipe
+    </a>
+
+
+
+
+
     <div class="flex flex-wrap justify-center">
         @foreach ($himus as $recipe)
             <div class="w-full max-w-sm m-2">
@@ -30,9 +40,10 @@
                             </span>
                         @endforeach
                         {{-- create a button named instructions which will open a drawer --}}
-                        <button class="inline-block bg-red-500 rounded-full px-3 py-1 text-sm font-semibold hover:bg-red-600 text-white mr-2">
+                        <a href="{{ url('/recipes/show/'.$recipe->id) }}" class="inline-block bg-red-500 rounded-full px-3 py-1 text-sm font-semibold hover:bg-red-600 text-white mr-2">
                             View Details
-                        </button>
+                            
+                        </a>
 
                     </div>
                 </div>

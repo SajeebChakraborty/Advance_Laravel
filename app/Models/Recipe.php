@@ -9,6 +9,9 @@ class Recipe extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['name', 'description', 'instruction'];
+    
+
     public function reviews() {
         return $this->hasMany('App\Models\Review');
     }

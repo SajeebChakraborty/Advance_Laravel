@@ -30,9 +30,10 @@
                             </span>
                         @endforeach
                         {{-- create a button named instructions which will open a drawer --}}
-                        <button class="inline-block bg-red-500 rounded-full px-3 py-1 text-sm font-semibold hover:bg-red-600 text-white mr-2">
+                        <a href="{{ url('/recipes/show/'.$recipes->id) }}" class="inline-block bg-red-500 rounded-full px-3 py-1 text-sm font-semibold hover:bg-red-600 text-white mr-2">
                             View Details
-                        </button>
+                            
+                        </a>
 
                     </div>
                 </div>
